@@ -6,9 +6,6 @@ function App() {
   const canvas = useRef(null);
 
   useEffect(() => {
-    // const imageURL = "./assets/awsicons/awsicons.svg";
-    // const imageId = "Icon-Resource/Analytics/Res_AWS-Lake-Formation_Data-Lake_48";
-
     const graph = new dia.Graph({}, { cellNamespace: shapes });
 
     const paper = new dia.Paper({
@@ -35,8 +32,8 @@ function App() {
       size: { width: 100, height: 100 },
       attrs: {
         image: {
-          href: `data:image/svg+xml;utf8,${encodeURIComponent(bucketImage)}`,
-          //href: `data:image/svg+xml;utf8,${encodeURIComponent(bucketSVGFile)}`,
+          // href: `data:image/svg+xml;utf8,${encodeURIComponent(bucketImage)}`,
+          href: `data:image/svg+xml;utf8,${encodeURIComponent(bucketSVGFile)}`,
         },
       },
     });
@@ -44,8 +41,6 @@ function App() {
     graph.addCells(standardImage);
 
     canvas.current.appendChild(paper.el);
-
-    paper.unfreeze();
 
     return () => {
       paper.remove();
