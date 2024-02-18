@@ -14,7 +14,7 @@
     "@joint/plus": "node_modules/jointplus/build/package/joint-plus.tgz"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=5001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
